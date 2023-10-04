@@ -55,7 +55,7 @@ print('*****************************',price_int)
 
 os.chdir(script_path)
 
-conn = sqlite3.connect('my_database.db')
+conn = sqlite3.connect('amazon.db')
 
 # Create a cursor object to interact with the database
 cursor = conn.cursor()
@@ -73,11 +73,12 @@ if 'amazondb.db' not in os.listdir():
 
     )
     '''
-
     # Execute the SQL statement to create the table
     cursor.execute(create_table_sql)
     # Commit the changes to the database
     conn.commit()
+
+    print('table created')
 
 
 # Insert the data into the table
