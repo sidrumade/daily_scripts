@@ -4,6 +4,7 @@ from webdriver_manager.microsoft import EdgeChromiumDriverManager
 import os
 import sqlite3
 
+script_path="C:\\Users\\siddh\\Documents\My Projects\\scripts"
 
 # Specify the directory path where the Edge WebDriver executable is located
 edge_driver_directory = "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\"  # Replace with the actual directory path
@@ -52,6 +53,7 @@ price_int = int(numeric_price_str)
 
 print('*****************************',price_int)
 
+os.chdir(script_path)
 
 conn = sqlite3.connect('my_database.db')
 
